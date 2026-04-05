@@ -68,21 +68,21 @@ const testimonials = [
     name: "Marcus Bell",
     role: "Account Executive",
     company: "Stratum Sales",
-    avatar: "MB",
+    avatar: "https://i.pravatar.cc/100?img=15",
   },
   {
     quote: "Our ClickUp tasks were always out of date. Now every call is logged with a timestamp and next steps without anyone touching it. Pipeline hygiene has never been better.",
     name: "Aisha Oduya",
     role: "Sales Operations Lead",
     company: "Crestfield Partners",
-    avatar: "AO",
+    avatar: "https://i.pravatar.cc/100?img=47",
   },
   {
     quote: "Response time matters in sales. FollowupFlow has our follow-up email in the client's inbox 10 minutes after every call. No human could be that consistent.",
     name: "Tom Hargreaves",
     role: "Managing Director",
     company: "BlueSky Advisors",
-    avatar: "TH",
+    avatar: "https://i.pravatar.cc/100?img=33",
   },
 ]
 
@@ -367,9 +367,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-700 text-sm leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
-                    {t.avatar}
-                  </div>
+                  <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
                     <p className="text-gray-500 text-xs">{t.role} · {t.company}</p>
