@@ -62,29 +62,6 @@ const steps = [
   },
 ]
 
-const testimonials = [
-  {
-    quote: "I used to spend the first 30 minutes after every call writing follow-up emails. FollowupFlow sends them automatically while I'm already in the next meeting.",
-    name: "Marcus Bell",
-    role: "Account Executive",
-    company: "Stratum Sales",
-    avatar: "https://i.pravatar.cc/100?img=15",
-  },
-  {
-    quote: "Our ClickUp tasks were always out of date. Now every call is logged with a timestamp and next steps without anyone touching it. Pipeline hygiene has never been better.",
-    name: "Aisha Oduya",
-    role: "Sales Operations Lead",
-    company: "Crestfield Partners",
-    avatar: "https://i.pravatar.cc/100?img=47",
-  },
-  {
-    quote: "Response time matters in sales. FollowupFlow has our follow-up email in the client's inbox 10 minutes after every call. No human could be that consistent.",
-    name: "Tom Hargreaves",
-    role: "Managing Director",
-    company: "BlueSky Advisors",
-    avatar: "https://i.pravatar.cc/100?img=33",
-  },
-]
 
 const stats = [
   { value: '10 min', label: 'after call end — follow-up sent' },
@@ -342,48 +319,6 @@ export default function Home() {
           <p className="text-center text-gray-500 text-sm mt-6">
             9 nodes · Fires automatically after every Calendly call · Zero manual steps
           </p>
-        </div>
-      </section>
-
-      {/* ── Social Proof ── */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-green-600 uppercase tracking-widest mb-3">Testimonials</p>
-            <h2 className="text-4xl font-extrabold text-gray-900">Reps who never drop the ball</h2>
-            <p className="mt-4 text-lg text-gray-500 max-w-xl mx-auto">
-              Sales teams that replaced manual post-call admin with FollowupFlow.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {testimonials.map((t) => (
-              <div key={t.name} className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col gap-6">
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-green-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-700 text-sm leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
-                <div className="flex items-center gap-3">
-                  <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-gray-900 text-sm">{t.name}</p>
-                    <p className="text-gray-500 text-xs">{t.role} · {t.company}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="border-t border-gray-100 pt-12">
-            <p className="text-center text-sm text-gray-400 font-medium mb-8">Trusted by teams at</p>
-            <div className="flex flex-wrap justify-center items-center gap-10">
-              {['Stratum Sales', 'Crestfield Partners', 'BlueSky Advisors', 'Apex Revenue', 'Meridian Group'].map((co) => (
-                <span key={co} className="text-gray-300 font-bold text-lg tracking-tight">{co}</span>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
